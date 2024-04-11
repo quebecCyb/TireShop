@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TireShop.DTO.Tire;
+using TireShop.DTO.Warehouse;
 using TireShop.Entities;
 using TireShop.Exceptions;
 using TireShop.Services.Interfaces;
@@ -47,9 +48,9 @@ namespace TireShop.Controllers
             if (!ModelState.IsValid)
                 throw new BadRequest($"Form Body Is Not Valid!");
 
-            return Ok(new ResponseFormat<List<Tire>>
+            return Ok(new ResponseFormat<IEnumerable<Tire>>
             {
-                Data = _mapper.Map<List<Tire>>(_service.Get(t => t.Id == Body.Id))
+                Data = _service.Get(t => (Body.Id == null || t.Id == Body.Id))
             });
         }
 

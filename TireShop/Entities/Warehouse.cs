@@ -13,7 +13,7 @@ namespace TireShop.Entities
         [StringLength(255)]
         public string Location { get; set; } = string.Empty;
 
-        public ICollection<Availability> Availabilities { get; set; }
-        public ICollection<Order> Orders { get; set; }
+        public ICollection<Availability>? Availabilities { get; set; }
+        public ICollection<Order>? Orders { get; set; }
     }
 }
