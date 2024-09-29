@@ -15,6 +15,6 @@ namespace TireShop.Entities
         public Tire? Tire { get; set; }
 
         public int Number { get; set; }
-        public bool IsAvailable { get; set; }
+        public bool IsAvailable { get; set; } = true;
     }
 }

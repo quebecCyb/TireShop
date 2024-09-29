@@ -42,5 +42,8 @@
     <Folder Include="Entities\Interfaces\" />
     <Folder Include="Exceptions\ErrorMessages\" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entity\" />
+  </ItemGroup>
 
 </Project>

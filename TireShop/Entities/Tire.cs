@@ -44,5 +44,10 @@ namespace TireShop.Entities
         public bool IsNew { get; set; } = false;
 
         public ICollection<Availability>? Availabilities { get; set; }
+        
+        
+
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
     }
 }
