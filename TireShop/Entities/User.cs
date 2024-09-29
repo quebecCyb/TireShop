@@ -17,5 +17,10 @@ namespace TireShop.Entities
         public string Password { get; set; } = string.Empty;
 
         public ICollection<Order> Orders { get; set; }
+        
+
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        
     }
 }
